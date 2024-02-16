@@ -1,0 +1,49 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-slot {
+    position: fixed;
+    top: -250px;
+    right: 500px;
+    position: relative;
+    height: 2em; /* Ajustez la hauteur du toggle */
+    width: 4em; /* Ajustez la largeur du toggle */
+    border: 1px solid #e4e7ec; /* Réduisez l'épaisseur de la bordure */
+    border-radius: 2em; /* Ajustez le rayon de la bordure pour maintenir la forme circulaire */
+    background-color: white;
+    box-shadow: 0px 2px 5px #e4e7ec; /* Réduisez la taille de l'ombre */
+    transition: background-color 250ms;
+}
+
+.toggle-checkbox:checked ~ .toggle-slot {
+    background-color: #374151;
+}
+
+.toggle-button {
+    transform: translate(2.35em, 0.35em); /* Ajustez la position du bouton après la réduction */
+    position: absolute;
+    height: 1.3em; /* Ajustez la hauteur du bouton à l'intérieur du toggle */
+    width: 1.3em; /* Ajustez la largeur du bouton à l'intérieur du toggle */
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.15em #ffbb52; /* Réduisez l'épaisseur de la bordure */
+    transition: background-color 250ms, border-color 250ms, transform 1500ms cubic-bezier(.26, 2, .46, .71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #485367;
+    box-shadow: inset 0px 0px 0px 0.15em white; /* Réduisez l'épaisseur de la bordure */
+    transform: translate(0.35em, 0.35em); /* Ajustez la position du bouton après la réduction */
+}
