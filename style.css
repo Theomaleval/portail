@@ -1,0 +1,28 @@
+body {
+    margin: 0; /* Supprime les marges par défaut du body */
+    padding: 0; /* Supprime les marges par défaut du body */
+}
+
+.btn-logout {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    padding: 5px 10px; /* Ajoutez un remplissage pour réduire la largeur du bouton */
+    /* Ajustez la largeur du bouton selon vos besoins */
+    width: auto; /* Définissez la largeur automatique pour que le bouton s'ajuste à son contenu */
+    background-color: #white; /* Exemple de couleur de fond */
+    color: #ffffff; /* Exemple de couleur de texte */
+    text-decoration: none; /* Enlève le soulignement du lien */
+    color: black; /* Couleur du texte de votre choix */
+}
+
+
+.top-band {
+    background-color: #5b5b5b; /* Couleur grise de votre choix */
+    height: 70px; /* Hauteur de la bande grise */
+    width: 100%; /* Largeur de la bande grise pour occuper toute la largeur de la page */
+    position: fixed; /* Position fixe pour rester en haut de la page */
+    top: 0; /* Position en haut de la page */
+    left: 0; /* Position en haut de la page */
+    z-index: -1; /* Met la bande grise en arrière-plan */
+}
