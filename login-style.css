@@ -16,6 +16,7 @@ body {
 }
 
 .rectangle {
+    right: 300px;
     width: 400px;
     height: 450px;
     box-sizing: border-box;
@@ -25,11 +26,21 @@ body {
     -webkit-backdrop-filter: blur(5px) saturate(160%);
     background: #000; /* Changed to solid black */
     border: 0.5mm solid rgba(0, 0, 0, 0.65);
-    position: relative;
+    position: absolute;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Ajoute une transition de 0.3 seconde sur la couleur de fond et la couleur du texte */
 }
 
 .text-to-change {
     transition: color 0.3s ease;
+}
+
+
+
+.alert {
+    color: white;
+    position: fixed;
+    top: 10px;
+    align-items: center; /* Centrer verticalement */
 }
 
 .title {
@@ -70,6 +81,7 @@ body {
     font-size: 15px;
     color: white;
     outline: none;
+    transition: border-color 0.3s ease; /* Ajoute une transition de 0.3 seconde sur la couleur de la bordure */
 }
 
 .input::placeholder {
@@ -148,6 +160,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Ajoute une transition de 0.3 seconde sur la couleur de fond et la couleur du texte */
 }
 
 .btn span {
@@ -186,6 +199,7 @@ body {
     animation: load 0.5s ease-out infinite alternate var(--delay);
 }
 
+
 @keyframes load {
     0% {
       background: rgb(0, 0, 0);
@@ -215,6 +229,12 @@ body {
 .input.active {
     animation: shake 0.25s ease-in-out 3;
 }
+
+
+
+
+
+
 
 @keyframes shake {
     0% {
