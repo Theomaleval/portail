@@ -21,9 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const textElements = document.querySelectorAll('.text-to-change'); // Sélection de tous les éléments de texte à modifier
     const rectangle = document.querySelector('.rectangle'); // Sélection du rectangle
     const bouton = document.querySelector('.btn'); // Sélection du bouton
+    const text = document.querySelector('.text'); // Sélection de tous les éléments de texte à modifier
     const passwordInput = document.querySelector('input[type="password"]'); // Sélection de l'input de type password
+    const hotlineText = document.querySelector('.hotline-text'); // Sélection de l'élément de texte contenant la hotline
 
-    
     toggleCheckbox.addEventListener('change', function () { // Ajout d'un gestionnaire d'événements pour le changement de la case à cocher
         if (toggleCheckbox.checked) { // Si la case est cochée
             body.style.backgroundColor = 'black'; // Changement de la couleur de fond de la page en noir
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 input.style.borderBottomColor = 'black'; // Changement de la couleur des barres en noir
                 input.style.color = 'black'; // Changement de la couleur du texte saisi en noir
             });
+            hotlineText.style.color = 'white'; // Changement de la couleur du texte de la hotline en blanc
         } else {
             body.style.backgroundColor = 'white'; // Sinon, changement de la couleur de fond de la page en blanc
             textElements.forEach(function (element) { // Parcours de tous les éléments de texte à modifier
@@ -51,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 input.style.borderBottomColor = 'white'; // Changement de la couleur des barres en blanc
                 input.style.color = 'white'; // Changement de la couleur du texte saisi en noir
             });
+            hotlineText.style.color = 'black'; // Changement de la couleur du texte de la hotline en noir
         }
     });
 });
