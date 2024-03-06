@@ -37,20 +37,8 @@ require_once(__DIR__ . '/functions.php');
         <!-- Formulaire de connexion -->
         <?php require_once(__DIR__ . '/login.php'); ?>
 
-        <?php foreach (getRecipes($recipes) as $recipe) : ?>
-            <article>
-            </article>
-        <?php endforeach ?>
     </div>
-    
-      </div class="rectangle">
-    </div>
-    <label>
-      <input type="checkbox" name="checkbox" class="toggle-checkbox" />
-      <div class="toggle-slot">
-        <div class="toggle-button"></div>
-      </div>
-    </label>
+
 
     <script src="script.js" defer></script> <!-- Ajout du fichier JavaScript -->
     <script>
@@ -67,9 +55,5 @@ require_once(__DIR__ . '/functions.php');
         }, 3000);
       };
     </script>
-
-
-
-    
   </body>
 </html>
