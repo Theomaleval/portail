@@ -10,6 +10,12 @@
                 unset($_SESSION['LOGIN_ERROR_MESSAGE']); ?>
             </div>
         <?php endif; ?>
+
+<div style="position: relative; width: 200px; height: auto;">
+    <img class="image" src="http://localhost:8080/portail/logo-IGPN.png" alt="Logo IGPN" style="width: 125%; height: auto; position: absolute; top: -180px; left: -400px;">
+    <p class="hotline-text" style="position: absolute; bottom: -150px; right: 375px; width: 100%; text-align: center; font-family: ;">En cas de problèmes merci de contacter la hotline au : 01-86-21-56-56</p>
+</div>
+
 <div class="center">
       <div class="rectangle" action="">
         <div class="title text-to-change">Login</div> <!-- Ajout de la classe text-to-change -->
@@ -37,7 +43,7 @@
         </button>
   <!-- Si utilisateur/trice bien connectée on affiche un message de succès -->
 <?php else : ?>
-    <div class="alert alert-success" role="alert">
-        Bonjour <?php echo $_SESSION['LOGGED_USER']['email']; ?> et bienvenue sur le site !
+    <div class="alert" role="alert">
+        Vous êtes actuellement connecté en tant que <?php echo $_SESSION['LOGGED_USER']['email']; ?>
     </div>
 <?php endif; ?>
